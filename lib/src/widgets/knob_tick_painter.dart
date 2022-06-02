@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:knob_widget/src/enums/elements_position.dart';
 import 'package:knob_widget/src/utils/major_tick_style.dart';
@@ -20,7 +18,7 @@ class KnobTickPainter extends CustomPainter {
   final double tickOffset;
   final double labelOffset;
   final TextStyle? labelStyle;
-
+  final bool showMinorTickLabels;
   //
   final double current;
   final Paint tickPaint;
@@ -37,6 +35,7 @@ class KnobTickPainter extends CustomPainter {
     this.minorTickStyle = const MinorTickStyle(),
     this.labelPosition = ElementsPosition.outside,
     this.labelStyle,
+    this.showMinorTickLabels = false,
     this.minorTicksPerInterval = 4,
     this.current = 0.0,
   }) : tickPaint = Paint() {
@@ -93,7 +92,7 @@ class KnobTickPainter extends CustomPainter {
       //
       for (int i = 0; i <= totalTickCount; i++) {
         bool isMajor = i % minorTickCount == 0;
-        if (isMajor) {
+        if (isMajor || showMinorTickLabels) {
           _textPainter.text = TextSpan(
             text: _getLabel((i * minorTickAngle).toInt()).toStringAsFixed(0),
             style: labelStyle,

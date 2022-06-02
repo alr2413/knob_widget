@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:knob_widget/src/controller/knob_controller.dart';
 import 'package:knob_widget/src/utils/knob_style.dart';
@@ -62,6 +60,7 @@ class _ControlKnobContainerState extends State<ControlKnobContainer> {
                   labelStyle: style.labelStyle,
                   minorTickStyle: style.minorTickStyle,
                   majorTickStyle: style.majorTickStyle,
+                  showMinorTickLabels: style.showMinorTickLabels,
                 ),
               ),
             ),

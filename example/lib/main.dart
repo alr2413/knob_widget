@@ -32,8 +32,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final double _minimum = 10;
-  final double _maximum = 40;
+  final double _minimum = 0;
+  final double _maximum = 100;
 
   late KnobController _controller;
   late double _knobValue;
@@ -92,7 +92,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   labelStyle: Theme.of(context).textTheme.bodyText1,
                   tickOffset: 5,
                   labelOffset: 10,
-                  minorTicksPerInterval: 5,
+                  minorTicksPerInterval: 10,
+                  showMinorTickLabels: true,
                 ),
               ),
             ),

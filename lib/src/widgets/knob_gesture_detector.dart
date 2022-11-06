@@ -9,7 +9,10 @@ import 'package:provider/provider.dart';
 class KnobGestureDetector extends StatefulWidget {
   const KnobGestureDetector({
     Key? key,
+    required this.discrete,
   }) : super(key: key);
+
+  final bool discrete;
 
   @override
   _KnobGestureDetectorState createState() => _KnobGestureDetectorState();
@@ -22,6 +25,9 @@ class _KnobGestureDetectorState extends State<KnobGestureDetector> {
     var controller = Provider.of<KnobController>(context, listen: false);
     var angle = coordinate.angle;
     var value = controller.getValueOfAngle(angle);
+    if (widget.discrete) {
+        value = value.round().toDouble();
+    }
     controller.setCurrentValue(value);
   }
 

@@ -32,6 +32,9 @@ class KnobStyle {
   /// knob control style
   final ControlStyle controlStyle;
 
+  /// knob discrete toggle
+  final bool discrete;
+
   /// knob style
   const KnobStyle({
     this.tickOffset = 0,
@@ -43,5 +46,6 @@ class KnobStyle {
     this.labelStyle = const TextStyle(),
     this.pointerStyle = const PointerStyle(),
     this.controlStyle = const ControlStyle(),
+    this.discrete = false,
   });
 }

@@ -39,7 +39,7 @@ class _ControlKnobContainerState extends State<ControlKnobContainer> {
             width: widget.width,
             height: widget.height,
             color: Colors.transparent,
-            child: const KnobGestureDetector(),
+            child: KnobGestureDetector(discrete: style.discrete,),
           ),
           IgnorePointer(
             child: Container(

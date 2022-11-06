@@ -93,6 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   tickOffset: 5,
                   labelOffset: 10,
                   minorTicksPerInterval: 5,
+                  discrete: false,
                 ),
               ),
             ),

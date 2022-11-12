@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'dart:math';
 
 import 'package:flutter/widgets.dart';
 import 'package:knob_widget/src/helper/angle_helper.dart';
@@ -29,6 +30,9 @@ class KnobController extends ValueNotifier<KnobValue> {
   /// end angle of knob in degree
   final double endAngle;
 
+  /// precision of value
+  final int precision;
+
   /// Constructs a [KnobController]
   ///
   KnobController({
@@ -37,6 +41,7 @@ class KnobController extends ValueNotifier<KnobValue> {
     this.maximum = 100,
     this.startAngle = 0,
     this.endAngle = 180,
+    this.precision = 2,
   })  : assert(maximum > minimum,
             'Maximum value must be greater than minimum value.'),
         assert(maximum >= initial && initial >= minimum,
@@ -64,6 +69,9 @@ class KnobController extends ValueNotifier<KnobValue> {
   /// make sure the value is between the provided min & max
   ///
   void setCurrentValue(double newValue) {
+    num mod = pow(10.0, precision);
+    newValue = ((newValue * mod).round().toDouble() / mod);
+    //
     if (newValue < value.minimum || newValue > value.maximum) {
       return;
     }

@@ -17,7 +17,7 @@ class ControlKnobContainer extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ControlKnobContainerState createState() => _ControlKnobContainerState();
+  State<ControlKnobContainer> createState() => _ControlKnobContainerState();
 }
 
 class _ControlKnobContainerState extends State<ControlKnobContainer> {

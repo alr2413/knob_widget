@@ -12,7 +12,7 @@ class KnobGestureDetector extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _KnobGestureDetectorState createState() => _KnobGestureDetectorState();
+  State<KnobGestureDetector> createState() => _KnobGestureDetectorState();
 }
 
 class _KnobGestureDetectorState extends State<KnobGestureDetector> {

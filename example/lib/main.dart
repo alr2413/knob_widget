@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       maximum: _maximum,
       startAngle: 0,
       endAngle: 180,
+      precision: 2,
     );
     _controller.addOnValueChangedListener(valueChangedListener);
   }

@@ -1,17 +1,17 @@
 name: knob_widget
 description: A knob widget for flutter
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/alr2413/knob_widget
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=1.12.0"
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  provider: ^6.0.4
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:

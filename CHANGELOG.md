@@ -1,3 +1,6 @@
+# 1.0.3
+* updated to flutter sdk 3
+
 # 1.0.2
 * Added value precision to knob controller
 * updated dependencies

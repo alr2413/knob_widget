@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 200,
                 height: 200,
                 style: KnobStyle(
-                  labelStyle: Theme.of(context).textTheme.bodyText1,
+                  labelStyle: Theme.of(context).textTheme.bodyLarge,
                   tickOffset: 5,
                   labelOffset: 10,
                   minorTicksPerInterval: 10,
